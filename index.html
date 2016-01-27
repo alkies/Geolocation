@@ -15,8 +15,8 @@ var map=null;
         var lat = position.coords.latitude;
         var lon = position.coords.longitude;
          
-             document.getElementById('latitude').innerHTML = lat;
-         document.getElementById('longitude').innerHTML = lon;
+             document.getElementById('latitude').innerHTML = 'Latitude: '+lat;
+         document.getElementById('longitude').innerHTML = 'Longitude: '+lon;
              
         var latLong = new google.maps.LatLng(lat, lon);
          
@@ -57,15 +57,15 @@ showlocation();
 
 <body>
     <center>
-        <input type="button" style="width:100%" value="Show my location on Map"
+        <input type="button" style="font-size:70px; width:100%; height:100px" value="Show my location on Map"
                 onclick="javascript:showlocation()"></input>   <br/>
     </center>
 
-        Latitude: <span id="latitude"></span>       <br/>
-        Longitude: <span id="longitude"></span>
+        <span id="latitude" style="font-size:50px;"></span>       <br/>
+        <span id="longitude" style="font-size:50px;"></span>
     <br/><br/>
 
-<div id="googleMap" style="width:100%;height:500px;"></div>
+<div id="googleMap" style="width:100%;height:1000px;"></div>
 
 </body>
 
